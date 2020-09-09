@@ -5,7 +5,7 @@ Home: https://CRAN.R-project.org/package=scatterpie
 
 Package license: Artistic-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Creates scatterpie plots, especially useful for plotting pies on a map.
 
