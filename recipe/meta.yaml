@@ -1,4 +1,4 @@
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/scatterpie_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/scatterpie/scatterpie_{{ version }}.tar.gz
-  sha256: 3f7807519cfe135066ca79c8d8a09b59da9aa6d8aaee5e9aff40cca3d0bebade
+  sha256: a6ccc63a8be63fa113704cf5d4893c1ec1b75d3081ab971bd70e650e708872a0
 
 build:
   merge_build_host: true  # [win]
@@ -23,19 +23,20 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-ggforce
+    - r-ggfun
     - r-ggplot2
     - r-rlang
-    - r-rvcheck >=0.1.0
     - r-tidyr
   run:
     - r-base
     - r-ggforce
+    - r-ggfun
     - r-ggplot2
     - r-rlang
-    - r-rvcheck >=0.1.0
     - r-tidyr
 
 test:
@@ -48,7 +49,8 @@ about:
   license: Artistic-2.0
   summary: Creates scatterpie plots, especially useful for plotting pies on a map.
   license_family: OTHER
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/Artistic-2.0
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/Artistic-2.0
 
 extra:
   recipe-maintainers:
