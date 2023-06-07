@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/scatterpie_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/scatterpie/scatterpie_{{ version }}.tar.gz
-  sha256: 499da655502d91f3f2eae03e33eb54ef18ef6a35aaf0107d462ff2a9a86f9919
+  sha256: 8b5ac54273f1d4a988e2ee8d3d8c863dc4e6307fe1bddd3019fc13bffd64d971
 
 build:
   merge_build_host: true  # [win]
