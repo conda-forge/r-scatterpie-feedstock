@@ -24,18 +24,22 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-dplyr
     - r-ggforce
     - r-ggfun
     - r-ggplot2
     - r-rlang
     - r-tidyr
+    - r-yulab.utils >=0.1.6
   run:
     - r-base
+    - r-dplyr
     - r-ggforce
     - r-ggfun
     - r-ggplot2
     - r-rlang
     - r-tidyr
+    - r-yulab.utils >=0.1.6
 
 test:
   commands:
