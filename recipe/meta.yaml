@@ -1,4 +1,4 @@
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/scatterpie_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/scatterpie/scatterpie_{{ version }}.tar.gz
-  sha256: 594b21b5815ad5678c1acdbc5e87a922f4c672fe409407422c4da9e39504b698
+  sha256: 56f1dccf7980c901c8e76dbd29801894d2075268eac7d2a0ce3a3923f3282c18
 
 build:
   number: 0
